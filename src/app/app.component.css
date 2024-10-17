@@ -1,0 +1,26 @@
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+button[mat-button] {
+  margin-bottom: 20px;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.mat-tooltip {
+  font-size: 14px;
+  background-color: #333;
+  color: white;
+}
+
+.tooltip-input {
+  padding-top: 20px;
+}
+
