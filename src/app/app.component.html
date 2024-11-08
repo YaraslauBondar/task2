@@ -1,11 +1,21 @@
 <div class="center-container">
-  <app-button-extend [isViewerDisabled]="isViewerDisabled"
+  <!--<app-button-extend [isViewerDisabled]="isViewerDisabled"
                      [matTooltip]="isViewerDisabled ? tooltip.value : null"
                      [matButton]="matButton"
                      [ngClass]="{'disabled': isViewerDisabled}"
                      matTooltipPosition="above">
     <button mat-button color="primary" #matButton>Action</button>
-  </app-button-extend>
+  </app-button-extend>-->
+
+  <button
+    mat-button
+    appPermissionButton
+    [viewerTooltip]="viewerTooltip"
+    [isViewerDisabled]="isViewerDisabled"
+    [hasPermission]="hasPermission"
+  >
+    Нажми меня
+  </button>
 
   <button mat-raised-button color="primary" (click)="toggleState()">
     Toggle (Current - {{isViewerDisabled ? 'Disabled' : 'Active'}})

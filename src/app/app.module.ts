@@ -8,12 +8,14 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButton } from '@angular/material/button';
 import { ButtonExtendComponent } from './button-extend/button-extend.component';
 import { MatInputModule } from '@angular/material/input';
+import {PermissionButtonDirective} from './permission-button.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonExtendComponent
+    ButtonExtendComponent,
+    PermissionButtonDirective
   ],
   imports: [
     BrowserModule,
