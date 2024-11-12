@@ -10,17 +10,6 @@ button[mat-button] {
   margin-bottom: 20px;
 }
 
-.disabled {
-  cursor: not-allowed;
-}
-
-.mat-tooltip {
-  font-size: 14px;
-  background-color: #333;
-  color: white;
-}
-
 .tooltip-input {
   padding-top: 20px;
 }
-

@@ -6,15 +6,14 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButton } from '@angular/material/button';
-import { ButtonExtendComponent } from './button-extend/button-extend.component';
 import { MatInputModule } from '@angular/material/input';
-import {PermissionButtonDirective} from './permission-button.directive';
+import { PermissionButtonDirective } from './permission-button.directive';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonExtendComponent,
     PermissionButtonDirective
   ],
   imports: [
@@ -22,7 +21,8 @@ import {PermissionButtonDirective} from './permission-button.directive';
     AppRoutingModule,
     MatTooltipModule,
     MatButton,
-    MatInputModule
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()

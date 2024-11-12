@@ -1,20 +1,10 @@
 <div class="center-container">
-  <!--<app-button-extend [isViewerDisabled]="isViewerDisabled"
-                     [matTooltip]="isViewerDisabled ? tooltip.value : null"
-                     [matButton]="matButton"
-                     [ngClass]="{'disabled': isViewerDisabled}"
-                     matTooltipPosition="above">
-    <button mat-button color="primary" #matButton>Action</button>
-  </app-button-extend>-->
-
   <button
     mat-button
     appPermissionButton
-    [viewerTooltip]="viewerTooltip"
-    [isViewerDisabled]="isViewerDisabled"
-    [hasPermission]="hasPermission"
-  >
-    Нажми меня
+    [viewerTooltip]="viewerTooltip.getRawValue()"
+    [isViewerDisabled]="isViewerDisabled">
+    Action
   </button>
 
   <button mat-raised-button color="primary" (click)="toggleState()">
@@ -23,6 +13,6 @@
 
   <mat-form-field class="tooltip-input">
     <mat-label>Tooltip</mat-label>
-    <input matInput placeholder="Enter tooltip" #tooltip value='Button is disabled'>
+    <input matInput placeholder="Enter tooltip" [formControl]="viewerTooltip">
   </mat-form-field>
 </div>
