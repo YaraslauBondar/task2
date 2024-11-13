@@ -96,6 +96,9 @@ export class PermissionButtonDirective implements AfterViewInit, OnChanges, OnDe
   ngOnDestroy() {
     this.overlay.removeEventListener('mouseenter', () => {});
     this.overlay.removeEventListener('mouseleave', () => {});
-    window.removeEventListener('resize', () => {});
+
+    window.removeEventListener('resize', () => {
+      this.updateOverlayPosition();
+    });
   }
 }
